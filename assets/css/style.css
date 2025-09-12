@@ -1,7 +1,6 @@
 :root {
     --color-primary : #4285F4;
     --color-secondary : #F6F6F6;
-    --color-tertiary : #77a6f3;
 
     --color-black : #000000;
     --color-white : #FFFFFF;
@@ -104,9 +103,9 @@ main .hero h1 {
 }
 
 main .hero p {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 40px;
-    color: var(--color-tertiary);
+    color: var(--color-primary);
     font-family: var(--font-primary);
 }
 
@@ -191,4 +190,91 @@ main .about .about-image {
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+/* Main Contact Section */
+
+main .contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: var(--color-secondary);
+    justify-content: center;
+    align-items: center;
+}
+
+main .contact h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    color: var(--color-black);
+}
+
+main .contact p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+}
+
+main .contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .contact form input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: var(--font-primary);
+}
+
+main .contact form textarea {
+    height: 100px;
+    width: 505px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    padding: 10px 20px;
+}
+
+main .contact form input:focus,
+main .contact form textarea:focus {
+    border-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+main .contact form input::placeholder,textarea::placeholder {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 16px;
+}
+
+main .contact form button {
+    margin-top: 20px;
+    width: 550px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--font-primary);
+}
+
+main .contact form button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: var(--color-primary) 1px solid;
 }
