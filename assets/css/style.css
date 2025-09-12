@@ -3,6 +3,9 @@
     --color-secondary : #F6F6F6;
     --color-tertiary : #77a6f3;
 
+    --color-black : #000000;
+    --color-white : #FFFFFF;
+
     --font-primary : monospace;
     --font-secondary : 'Gendy';
 }
@@ -39,7 +42,7 @@ nav {
 }
 
 .nav-logo {
-    background-image: url('/assets/img/logo.jpg');
+    background-image: url('/assets/img/profile.jpg');
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -76,31 +79,38 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Main */
+/* Main Hero Section */
 
 main {
-    padding-left: 150px;
-    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+main .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    min-height: 80vh;
+    min-height: 90vh;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
-main h1 {
+main .hero h1 {
     font-size: 100px;
     margin-bottom: 20px;
     font-family: var(--font-secondary);
 }
 
-main p {
+main .hero p {
     font-size: 20px;
     margin-bottom: 40px;
     color: var(--color-tertiary);
     font-family: var(--font-primary);
 }
-.resume-link {
+
+main .resume-link {
     text-decoration: none;
     color: var(--color-primary);
     font-size: 16px;
@@ -118,8 +128,67 @@ main p {
     display: flex;
 }
 
-.resume-link:hover {
+main .resume-link:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: var(--color-primary) 1px solid;
+}
+
+/* Main About Section */
+
+main .about {
+    display: flex;
+    min-height: 80vh;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #4285F4;
+    justify-content: center;
+    align-items: center;
+}
+
+main .about h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+}
+
+main .about h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    color: var(--color-secondary);
+}
+
+main .about h3 span {
+    color: var(--color-secondary);
+}
+
+main .about p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: var(--color-secondary);
+    font-family: var(--font-primary);
+}
+
+main .about .about-text {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left
+}
+
+main .about .about-image {
+    background-image: url('/assets/img/profile.jpg');
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background-size: cover;
+    border:var(--color-secondary) 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
