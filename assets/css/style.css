@@ -1,0 +1,125 @@
+:root {
+    --color-primary : #4285F4;
+    --color-secondary : #F6F6F6;
+    --color-tertiary : #77a6f3;
+
+    --font-primary : monospace;
+    --font-secondary : 'Gendy';
+}
+
+@font-face {
+    font-family: 'Gendy';
+    src: url('../fonts/Gendy.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-secondary);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-logo {
+    background-image: url('/assets/img/logo.jpg');
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    border:var(--color-secondary) 1px solid;
+}
+
+nav h1 {
+    padding: 10px;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    padding: 10px 20px;
+}
+
+nav a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Main */
+
+main {
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-height: 80vh;
+}
+
+main h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+}
+
+main p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: var(--color-tertiary);
+    font-family: var(--font-primary);
+}
+.resume-link {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 16px;
+    font-family: var(--font-primary);
+    width: 140px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.resume-link:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: var(--color-primary) 1px solid;
+}
