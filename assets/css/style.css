@@ -29,7 +29,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: auto;
+    min-height: 80px;
+    padding: 0 20px;
+    position: relative;
     padding-left: 150px;
     padding-right: 150px;
 }
@@ -38,37 +41,72 @@ nav {
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-logo-container {
+    display: flex;
+    align-items: center;
 }
 
 .nav-logo {
     background-image: url('/assets/img/profile.jpg');
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-size: cover;
-    border:var(--color-secondary) 1px solid;
+    border: var(--color-secondary) 1px solid;
+    margin-right: 10px;
 }
 
 nav h1 {
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    white-space: nowrap;
+    color: var(--color-secondary);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 nav ul {
     list-style: none;
-    margin-left: auto;
     padding: 0;
     display: flex;
+    margin: 0;
+    transition: all 0.3s ease;
 }
 
 nav li {
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
 
 nav a {
     color: var(--color-secondary);
     text-decoration: none;
     font-size: 16px;
+    transition: all 0.3s ease;
+    display: block;
 }
 
 nav a:hover {
@@ -77,6 +115,33 @@ nav a:hover {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+/* Main Hero Section Responsive */
+main .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    min-height: 90vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main .hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    line-height: 1.2;
+}
+
+main .hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    line-height: 1.6;
+}
+
 
 /* Main Hero Section */
 
@@ -197,12 +262,12 @@ main .our-headquarter-item p {
 
 /* Main message-us Section */
 
+/* Main message-us Section */
 main .message-us {
     display: flex;
     flex-direction: column;
     min-height: 50vh;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 40px 20px;
     background-color: var(--color-secondary);
     justify-content: center;
     align-items: center;
@@ -210,17 +275,21 @@ main .message-us {
 }
 
 main .message-us h1 {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 15px;
     font-family: var(--font-secondary);
     color: var(--color-black);
+    text-align: center;
 }
 
 main .message-us p {
-    font-size: 15px;
-    margin-bottom: 40px;
+    font-size: 14px;
+    margin-bottom: 30px;
     color: var(--color-primary);
     font-family: var(--font-primary);
+    text-align: center;
+    max-width: 600px;
+    padding: 0 10px;
 }
 
 main .message-us form {
@@ -228,26 +297,32 @@ main .message-us form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 main .message-us form input {
-    width: 500px;
+    width: 100%;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid var(--color-primary);
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 12px;
     font-family: var(--font-primary);
+    box-sizing: border-box;
 }
 
 main .message-us form textarea {
     height: 100px;
-    width: 505px;
+    width: 100%;
     font-size: 12px;
     border-radius: 5px;
     border: 1px solid var(--color-primary);
-    padding: 10px 20px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 main .message-us form input:hover,
@@ -266,7 +341,8 @@ main .message-us form textarea:focus {
     color: var(--color-secondary);
 }
 
-main .message-us form input::placeholder,textarea::placeholder {
+main .message-us form input::placeholder,
+main .message-us form textarea::placeholder {
     color: var(--color-primary);
     font-family: var(--font-primary);
     font-size: 12px;
@@ -283,22 +359,24 @@ main .message-us form textarea:focus::placeholder {
 }
 
 main .message-us form input[type="date"] {
-    width: 500px;
+    width: 100%;
     height: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid var(--color-primary);
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 12px;
     font-family: var(--font-primary);
+    box-sizing: border-box;
 }
 
 main .message-us form .gender {
     display: flex;
     justify-content: flex-start;
-    width: 500px;
-    margin-bottom: 20px;
-    gap: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 main .message-us form .gender label {
@@ -308,11 +386,12 @@ main .message-us form .gender label {
     display: flex;
     align-items: center;
     gap: 5px;
+    white-space: nowrap;
 }
 
 main .message-us form .gender input[type="radio"] {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     accent-color: var(--color-primary);
 }
 
@@ -328,8 +407,8 @@ main .message-us form input[type="date"]:focus {
 }
 
 main .message-us form button {
-    margin-top: 20px;
-    width: 550px;
+    margin-top: 15px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -338,6 +417,7 @@ main .message-us form button {
     cursor: pointer;
     font-size: 12px;
     font-family: var(--font-primary);
+    transition: all 0.3s ease;
 }
 
 main .message-us form button:hover {
@@ -362,10 +442,11 @@ main .message-us form button:hover {
 
 .modal-content {
     background-color: var(--color-secondary);
-    margin: auto;
+    margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     font-family: var(--font-primary);
     color: var(--color-black);
     position: relative;
@@ -390,4 +471,382 @@ footer {
     text-align: center;
     font-size: 12px;
     font-family: var(--font-primary);
+}
+
+/* Our Profile Page */
+
+.our-profile-banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/11/Kantor_Pusat_Pos_Indonesia.JPG');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-profile-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 133, 244, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-profile-banner .banner-content {
+    color: var(--color-secondary);
+    text-align: center;
+    max-width: 800px;
+}
+
+.our-profile-banner .banner-content h1 {
+    font-size: 50px;
+    font-family: var(--font-secondary);
+    margin-bottom: 20px;
+}
+
+.our-profile-banner .banner-content p {
+    font-size: 18px;
+    font-family: var(--font-primary);
+}
+
+/* Our Vision & Mission Section */
+
+.our-vision-mission {
+    padding: 80px 200px;
+    background-color: var(--color-secondary);
+    text-align: center;
+}
+
+.our-vision-mission h2 {
+    font-size: 40px;
+    font-family: var(--font-secondary);
+    color: var(--color-black);
+    margin-bottom: 50px;
+}
+
+.our-vision-mission .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.our-vision-mission .vision,
+.our-vision-mission .mission {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.our-vision-mission .vision h3,
+.our-vision-mission .mission h3 {
+    font-size: 28px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.our-vision-mission .vision p {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--color-black);
+}
+
+.our-vision-mission .mission ul {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--color-black);
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* About Company Section */
+
+.about-company {
+    padding: 80px 200px;
+    background-color: var(--color-primary);
+}
+
+.about-company h2 {
+    font-size: 36px;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: var(--font-secondary);
+}
+
+.about-company .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-company .about-text p {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+.about-company .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    
+    main .hero {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    main .hero h1 {
+        font-size: 80px;
+    }
+    
+    main .hero p {
+        font-size: 24px;
+    }
+    
+    main .our-headquarter {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    main .message-us {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    main .message-us form input,
+    main .message-us form textarea,
+    main .message-us form .gender,
+    main .message-us form button {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .our-vision-mission,
+    .about-company {
+        padding: 60px 100px;
+    }
+}
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+    header {
+        padding: 0 15px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9;
+    }
+    
+    nav ul.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    nav li {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+    
+    nav a {
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    nav a:hover {
+        padding: 10px 0;
+        background-color: transparent;
+        color: var(--color-secondary);
+        text-decoration: underline;
+    }
+    
+    .nav-logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    nav h1 {
+        font-size: 16px;
+        padding: 5px;
+    }
+    
+    main .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        min-height: 70vh;
+    }
+    
+    main .hero h1 {
+        font-size: 50px;
+    }
+    
+    main .hero p {
+        font-size: 18px;
+    }
+    
+    main .our-headquarter {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    main .our-headquarter h1 {
+        font-size: 36px;
+    }
+    
+    main .our-headquarter-item {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    main .our-headquarter-item .headquarter-image-1, 
+    main .our-headquarter-item .headquarter-image-2, 
+    main .our-headquarter-item .headquarter-image-3 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    main .message-us {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    main .message-us h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    main .message-us p {
+        text-align: center;
+    }
+    
+    main .message-us form input,
+    main .message-us form textarea,
+    main .message-us form .gender,
+    main .message-us form button {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+    
+    /* Our Profile Page Mobile Styles */
+    .our-profile-banner {
+        height: 300px;
+    }
+    
+    .our-profile-banner .banner-content h1 {
+        font-size: 36px;
+    }
+    
+    .our-profile-banner .banner-content p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+    
+    .our-vision-mission,
+    .about-company {
+        padding: 40px 20px;
+    }
+    
+    .our-vision-mission h2 {
+        font-size: 30px;
+    }
+    
+    .our-vision-mission .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-company h2 {
+        font-size: 30px;
+    }
+    
+    .about-company .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 0 10px;
+        min-height: 70px;
+    }
+    
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    nav h1 {
+        font-size: 14px;
+    }
+    
+    nav ul {
+        top: 70px;
+    }
+    
+    main .hero h1 {
+        font-size: 40px;
+    }
+    
+    main .hero p {
+        font-size: 16px;
+    }
+    
+    main .our-headquarter-item .headquarter-image-1, 
+    main .our-headquarter-item .headquarter-image-2, 
+    main .our-headquarter-item .headquarter-image-3 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .our-profile-banner {
+        height: 250px;
+    }
+    
+    .our-profile-banner .banner-content h1 {
+        font-size: 28px;
+    }
 }
