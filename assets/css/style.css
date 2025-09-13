@@ -133,134 +133,201 @@ main .resume-link:hover {
     border: var(--color-primary) 1px solid;
 }
 
-/* Main About Section */
+/* Main Our Headquarter Section */
 
-main .about {
+main .our-headquarter {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     min-height: 80vh;
     padding-left: 150px;
     padding-right: 150px;
-    background-color: #4285F4;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
-main .about h1 {
+main .our-headquarter h1 {
+    width: 100%;
     font-size: 50px;
-    margin-bottom: 20px;
     font-family: var(--font-secondary);
-    color: var(--color-secondary);
+    margin-bottom: 50px;
+    text-align: center;
 }
 
-main .about h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-family: var(--font-secondary);
-    color: var(--color-secondary);
-}
-
-main .about h3 span {
-    color: var(--color-secondary);
-}
-
-main .about p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    color: var(--color-secondary);
-    font-family: var(--font-primary);
-}
-
-main .about .about-text {
-    height: 100%;
-    width: 50%;
+main .our-headquarter-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left
+    align-items: center;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
 }
 
-main .about .about-image {
-    background-image: url('/assets/img/profile.jpg');
-    width: 450px;
-    height: 450px;
+main .our-headquarter-item .headquarter-image-1 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b6/Jakarta_Skyline_Part_2.jpg');
+}
+main .our-headquarter-item .headquarter-image-2 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/Bandung_View_dari_Gedung_Wisma_HSBC_Asia_Afrika_4.jpg');
+}
+main .our-headquarter-item .headquarter-image-3 {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/09/Central_Surabaya_view_taken_from_JW_Marriott_Surabaya.jpg');
+}
+
+main .our-headquarter-item .headquarter-image-1, main .our-headquarter-item .headquarter-image-2, main .our-headquarter-item .headquarter-image-3 {
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-size: cover;
-    border:var(--color-secondary) 1px solid;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    border: 1px solid var(--color-secondary);
+    margin-bottom: 20px;
 }
 
-/* Main Contact Section */
+main .our-headquarter-item h3 {
+    font-size: 20px;
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+}
 
-main .contact {
+main .our-headquarter-item p {
+    font-size: 18px;
+    font-family: var(--font-primary);
+    color: var(--color-secondary);
+}
+
+/* Main message-us Section */
+
+main .message-us {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
-    padding-left: 150px;
-    padding-right: 150px;
+    min-height: 50vh;
+    padding-left: 200px;
+    padding-right: 200px;
     background-color: var(--color-secondary);
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
-main .contact h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+main .message-us h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
     font-family: var(--font-secondary);
     color: var(--color-black);
 }
 
-main .contact p {
-    font-size: 20px;
+main .message-us p {
+    font-size: 15px;
     margin-bottom: 40px;
     color: var(--color-primary);
     font-family: var(--font-primary);
 }
 
-main .contact form {
+main .message-us form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-main .contact form input {
+main .message-us form input {
     width: 500px;
     height: 40px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid var(--color-primary);
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 12px;
     font-family: var(--font-primary);
 }
 
-main .contact form textarea {
+main .message-us form textarea {
     height: 100px;
     width: 505px;
-    font-size: 16px;
+    font-size: 12px;
     border-radius: 5px;
     border: 1px solid var(--color-primary);
     padding: 10px 20px;
 }
 
-main .contact form input:focus,
-main .contact form textarea:focus {
+main .message-us form input:hover,
+main .message-us form textarea:hover {
     border-color: var(--color-secondary);
     background-color: var(--color-primary);
     outline-color: var(--color-secondary);
     color: var(--color-secondary);
 }
 
-main .contact form input::placeholder,textarea::placeholder {
-    color: var(--color-primary);
-    font-family: var(--font-primary);
-    font-size: 16px;
+main .message-us form input:focus,
+main .message-us form textarea:focus {
+    border-color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
-main .contact form button {
+main .message-us form input::placeholder,textarea::placeholder {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 12px;
+}
+
+main .message-us form input:hover::placeholder,
+main .message-us form textarea:hover::placeholder {
+    color: var(--color-secondary);
+}
+
+main .message-us form input:focus::placeholder,
+main .message-us form textarea:focus::placeholder {
+    color: var(--color-secondary);
+}
+
+main .message-us form input[type="date"] {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    padding: 10px 20px;
+    font-size: 12px;
+    font-family: var(--font-primary);
+}
+
+main .message-us form .gender {
+    display: flex;
+    justify-content: flex-start;
+    width: 500px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+main .message-us form .gender label {
+    font-family: var(--font-primary);
+    font-size: 12px;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+main .message-us form .gender input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+}
+
+main .message-us form input[type="date"] {
+    color: var(--color-primary);
+}
+
+main .message-us form input[type="date"]:hover,
+main .message-us form input[type="date"]:focus {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-color: var(--color-secondary);
+}
+
+main .message-us form button {
     margin-top: 20px;
     width: 550px;
     height: 40px;
@@ -269,12 +336,58 @@ main .contact form button {
     background-color: var(--color-primary);
     color: var(--color-secondary);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     font-family: var(--font-primary);
 }
 
-main .contact form button:hover {
+main .message-us form button:hover {
     background-color: var(--color-secondary);
     color: var(--color-primary);
     border: var(--color-primary) 1px solid;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--color-secondary);
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    font-family: var(--font-primary);
+    color: var(--color-black);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--color-primary);
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--font-primary);
 }
