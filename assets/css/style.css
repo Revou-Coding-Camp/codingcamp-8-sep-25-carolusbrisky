@@ -380,3 +380,14 @@ main .message-us form button:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Footer */
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--font-primary);
+}

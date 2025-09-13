@@ -48,3 +48,8 @@ window.addEventListener('click', function(e){
         modal.style.display = 'none';
     }
 });
+
+const yearSpan = document.getElementById('year');
+
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
