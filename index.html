@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potfolio</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
@@ -11,46 +11,80 @@
         <nav>
             <div class="nav-logo">
             </div>
-            <h1>Carolus Barromeus Risky</h1>
+            <h1>Core.Tech</h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="our-profile.html">Our Profile</a></li>
+                <li><a href="portofolio.html">Portfolio</a></li>
+                <li><a href="message-us.html">Message Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
-                    <h1>Welcome to <br> My Portfolio</h1>
-        <p>Informatics Engineering Student <br>Focused on Software & System Development</p>
-        <a href="/assets/files/Resume.pdf" download="Resume.pdf" class="resume-link">Download Resume</a>
+        <h1>Hi <span id="user-name">Guest</span>, <br> Welcome To Website</h1>
+        <p>Welcome to our official website.
+            <br>
+            We are committed to delivering innovation, quality, and excellent services
+            <br>
+            to support your needs and help you grow with us.
+        </p>
         </section>
 
-        <section class="about">
-            <div class="about-text">
-                <h1>About Me</h1>
-                <h3>21 years <span>/</span> Student <span>/</span> Freelance</h3>
-                <p>Hi! I’m Risky, a freelance developer currently pursuing my studies in IT. I enjoy experimenting with modern technologies and love building projects—ranging from simple websites to microservices-based systems.</p>
-                <p>I believe coding is not just about writing lines of code, but about creating solutions that truly help people.</p>
-                <p>If you’re looking for a partner to build an app, a website, or simply to chat about technology, feel free to connect with me!</p>
+        <section class="our-headquarter">
+            <h1>Our Headquarter</h1>
+            
+            <div class="our-headquarter-item">
+                <div class="headquarter-image-1"></div>
+                <h3><span>Headquarter</span> Jakarta</h3>
+                <p>Our Headquarter is located in Jakarta, Indonesia.</p>
             </div>
-            <div class="about-image"></div>
+            
+            <div class="our-headquarter-item">
+                <div class="headquarter-image-2"></div>
+                <h3><span>Headquarter</span> Bandung</h3>
+                <p>Our Headquarter is located in Bandung, Indonesia.</p>
+            </div>
+
+            <div class="our-headquarter-item">
+                <div class="headquarter-image-3"></div>
+                <h3><span>Headquarter</span> Surabaya</h3>
+                <p>Our Headquarter is located in Surabaya, Indonesia.</p>
+            </div>
         </section>
-        <section class="contact">
-            <h1>Contact Us</h1>
+
+        <section class="message-us">
+            <h1>Message Us</h1>
             <p>My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
             <form action="">
                 <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
+                <input type="date" placeholder="Date of Birth">
+
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender" value="Male">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+                </div>
+
                 <textarea placeholder="Message"></textarea>
                 <button type="submit">Send</button>
             </form>
+            <!-- <div id="form-output" style="margin-top:20px; font-family:var(--font-primary);"></div> -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close-modal" class="close">&times;</span>
+                    <h3>Form Submission</h3>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
     <script src="/assets/js/script.js">
     </script>
 </body>
